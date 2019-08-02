@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.demo.dao.UserMapper">
+    <resultMap id="user" type="com.example.demo.model.User">
+        <id column="id" property="id"/>
+        <id column="username" property="username"/>
+        <id column="password" property="password"/>
+        <id column="create_time" property="createTime"/>
+        <id column="status" property="status"/>
+    </resultMap>
+    <!--<sql id="Base_User">
+        id, username, password, create_time, status
+    </sql>-->
+    <!--suppress MybatisMapperXmlInspection -->
+    <select id="findByUsername" resultMap="user">
+        select *
+        from user
+        where username = #{username}
+    </select>
+
+</mapper>

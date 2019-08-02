@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.demo.dao.UserPermissionMapper">
+
+    <resultMap id="permission" type="com.example.demo.model.Permission">
+        <id column="id" property="id"/>
+        <id column="url" property="url"/>
+        <id column="name" property="name"/>
+    </resultMap>
+
+    <!--suppress MybatisMapperXmlInspection -->
+    <select id="findByUserName" resultMap="permission">
+        select p.id, p.url, p.name
+        from role r
+                 left join user_role ur on r.id = ur.rid
+                 left join user u on u.id = ur.user_id
+                 left join role_permission rp on rp.rid = r.id
+                 left join permission p on p.id = rp.pid
+        where u.username = #{username};
+    </select>
+</mapper>
