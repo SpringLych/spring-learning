@@ -1,0 +1,6 @@
+spring:
+  rabbitmq:
+    host: ***REMOVED***
+    port: 5672
+    username: root
+    password: ***REMOVED***
