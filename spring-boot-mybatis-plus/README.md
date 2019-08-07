@@ -36,10 +36,11 @@ MyBatis-Plus是MyBatis的增强工具。
         <scope>test</scope>
     </dependency>
 
+<!--    mybatis-plus 插件-->
     <dependency>
         <groupId>com.baomidou</groupId>
         <artifactId>mybatis-plus-boot-starter</artifactId>
-        <version>3.1.1</version>
+        <version>3.1.2</version>
     </dependency>
 </dependencies>
 ```
