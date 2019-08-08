@@ -4,7 +4,7 @@
  Source Server         : 阿里云-docker
  Source Server Type    : MySQL
  Source Server Version : 80017
- Source Host           : ***REMOVED***:3306
+ Source Host           : 149.129.78.187:3306
  Source Schema         : springbootlearn
 
  Target Server Type    : MySQL
