@@ -27,11 +27,11 @@ public class MysqlGenerator {
     /**
      * 数据库相关连接
      */
-    private static final String URL = "jdbc:mysql://:3306/springboot_mybatis?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&useSSL=false";
+    private static final String URL = "jdbc:mysql:149.129.78.187//:3306/springboot_mybatis?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&useSSL=false";
 
-    private static final String USERNAME = "";
+    private static final String USERNAME = "root";
 
-    private static final String PASSWORD = "";
+    private static final String PASSWORD = "654321";
 
     private static final String DRIVER = "com.mysql.cj.jdbc.Driver";
 

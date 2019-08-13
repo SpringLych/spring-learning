@@ -22,11 +22,10 @@
             gmt_modified
     </sql>
     <!--分页查询-->
-    <select id="selectPageVo" resultMap="BaseResultMap">
+    <select id="selectPage" resultMap="BaseResultMap">
         select
         <include refid="Base_Column_List"/>
         from user
-        where status = #{status}
     </select>
 
 </mapper>

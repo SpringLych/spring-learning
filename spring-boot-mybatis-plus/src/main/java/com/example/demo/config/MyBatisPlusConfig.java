@@ -20,7 +20,9 @@ public class MyBatisPlusConfig {
      */
     @Bean
     public PaginationInterceptor paginationInterceptor() {
+        PaginationInterceptor interceptor = new PaginationInterceptor();
+        interceptor.setDialectType("mysql");
         // paginationInterceptor.setLimit(你的最大单页限制数量，默认 500 条，小于 0 如 -1 不受限制);
-        return new PaginationInterceptor();
+        return interceptor;
     }
 }

@@ -6,6 +6,8 @@ import com.example.demo.entity.User;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Param;
 
+import java.util.List;
+
 /**
  * <p>
  * Mapper 接口
@@ -21,9 +23,9 @@ public interface UserDao extends BaseMapper<User> {
      * 注意!!: 如果入参是有多个,需要加注解指定参数名才能在xml中取值
      * </p>
      *
-     * @param page 分页对象,xml中可以从里面进行取值,传递参数 Page 即自动分页,必须放在第一位(你可以继承Page实现自己的分页对象)
+     * @param page   分页对象,xml中可以从里面进行取值,传递参数 Page 即自动分页,必须放在第一位(你可以继承Page实现自己的分页对象)
      * @param status 状态
      * @return 分页对象
      */
-    IPage<User> selectPageVo(Page page, @Param("status") Integer status);
+    IPage<User> selectPage(Page page, @Param("status") String status);
 }
