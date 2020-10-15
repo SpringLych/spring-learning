@@ -93,6 +93,12 @@ public class AuthorizationServer extends AuthorizationServerConfigurerAdapter {
 
 ```
 
+* @EnableAuthorizationServer 注解告诉 Spring 激活 authorization server，开启授权服务器的自动化配置。
+* @Configuration 注解表明这是一个 authorization server 配置类。
+* AuthorizationServerConfigurerAdapter 是 Spring 提供的默认实现 AuthorizationServerConfigurer 接口的类，里面都是空方法。
+
+* ClientDetailsServiceConfigurer 是配置 authorization server 颁发的 client 的凭证
+
 
 
 AuthorizationServer 类记得加上 @EnableAuthorizationServer 注解，表示开启授权服务器的自动化配置。
