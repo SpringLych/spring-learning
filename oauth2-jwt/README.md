@@ -95,7 +95,7 @@ public class AuthorizationServer extends AuthorizationServerConfigurerAdapter {
 
 ```
 
-
+结合 Jwt 需要配置 JwtAccessTokenConverter 实例，JWT 字符串由该实例负责生成。
 
 
 
