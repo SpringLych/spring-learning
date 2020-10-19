@@ -1,0 +1,11 @@
+spring:
+  redis:
+    password: 654321
+  datasource:
+    url: jdbc:mysql://localhost:3306/oauth2_store?useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: 654321
+
+  # 允许我们自己的实例覆盖系统默认的实例，系统中已经创建 ClientDetailsService，我们使用自己创建的 ClientDetailsService
+  main:
+    allow-bean-definition-overriding: true
